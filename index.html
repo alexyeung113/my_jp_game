@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172d3a">
+  <link rel="icon" href="data:,">
+  <title>和風冒險</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="和風冒險首頁"><span class="brand-mark">旅</span><span>和風冒險</span></a>
+    <div class="top-note"><span class="live-dot"></span>語言冒險者公會</div>
+    <div class="top-right"><span class="coin-icon">✦</span><span id="total-xp">0</span><span class="top-xp-label">經驗值</span></div>
+  </header>
+  <main id="top" class="shell">
+    <section class="adventurer-card" aria-label="冒險者狀態">
+      <div class="adventurer-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span>你的冒險旅程</div>
+        <h1>踏上日語修行之路<span class="title-star">✳</span></h1>
+        <p class="hero-sub">每一個字，都帶你走得更遠。</p>
+        <div class="player-row">
+          <div class="rank-badge"><span class="rank-symbol">旅</span><span><small>冒險者等級</small><strong id="player-level">等級 1</strong></span></div>
+          <div class="xp-block"><div class="xp-label"><span>修行進度</span><span id="xp-label">0 / 100</span></div><div class="xp-track"><div id="xp-fill" class="xp-fill"></div></div></div>
+        </div>
+      </div>
+      <div class="companion-wrap"><span class="companion-orbit orbit-one"></span><span class="companion-orbit orbit-two"></span><img class="companion" src="assets/calico-cat.png" alt="陪伴你的三花貓嚮導"><span class="companion-tag">三花貓・花卷 <span>✦</span></span></div>
+      <div class="hero-seal" aria-hidden="true">日本<br>語學<br>修行</div>
+    </section>
+
+    <section class="map-section" aria-labelledby="map-title">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-line"></span>選擇你的目的地</div><h2 id="map-title">冒險地圖</h2></div><div class="map-caption"><span class="map-caption-icon">⌖</span>七段旅程，任你探索</div></div>
+      <div class="stage-grid" id="stage-grid"></div>
+      <div class="map-footer"><span class="map-footer-mark">✧</span><span>不必等待解鎖，現在就出發吧。</span><span class="map-footer-mark">✧</span></div>
+    </section>
+    <section class="record-strip" aria-label="冒險紀錄"><div class="record-label"><span class="record-icon">巻</span><span>冒險紀錄</span></div><div class="record-stat"><strong id="clear-count">0</strong><span>完成旅程</span></div><div class="record-stat"><strong id="best-combo">0</strong><span>最高連擊</span></div><div class="record-stat"><strong id="achievement-count">0</strong><span>獲得徽章</span></div><div class="record-emblem">✿</div></section>
+  </main>
+  <div id="game-layer" class="game-layer" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
